@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Selectors Demo</title>
+<style>
+*{font-family:Arial;margin:6px;}
+#container{
+    background:#cb92c7;
+    border:2px solid #4b6cff;
+    padding:15px;
+    border-radius:10px;}
+.title{
+    color:#4b6cff;
+    text-align:center;
+    text-transform:uppercase;
+    letter-spacing:1px;}
+.desc p span{color:#e91e63;font-weight:600;}
+h2,p{color:#222;}
+.note{background:#e1edc1;border-left:4px solid #ffb300;padding:6px;border-radius:5px;}
+</style>
+</head>
+<body>
+<div id="container">
+  <h1 class="title">CSS Selectors Example</h1>
+  <section class="desc">
+    <h2>Descendant Selector</h2>
+    <p>This <span>highlighted text</span> shows descendant styling.</p>
+  </section>
+  <p class="note">This is styled using a <b>class selector</b>.</p>
+  <p id="footer">This uses an <b>ID selector</b> for layout container.</p>
+</div>
+</body>
+</html>
