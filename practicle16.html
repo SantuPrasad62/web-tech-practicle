@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Show Hide & Toggle Class</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    #box {
+      margin-top: 15px;
+      padding: 20px;
+      border: 2px solid black;
+      display: none;
+    }
+
+    .active {
+      background-color: skyblue;
+      color: darkblue;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Show / Hide & Toggle CSS Class</h2>
+
+  <button onclick="toggleBox()">Toggle Box</button>
+
+  <div id="box">JavaScript DOM Manipulation Example</div>
+
+  <script>
+    function toggleBox() {
+      let box = document.getElementById("box");
+
+      if (box.style.display === "none") {
+        box.style.display = "block";
+      } else {
+        box.style.display = "none";
+      }
+
+      
+      box.classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>

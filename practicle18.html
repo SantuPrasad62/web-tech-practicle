@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Create & Manipulate</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+    }
+
+    ul {
+      margin-top: 15px;
+    }
+
+    li {
+      padding: 8px;
+      margin: 5px 0;
+      background-color: lightgray;
+    }
+
+    .highlight {
+      background-color: lightgreen;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>DOM Create, Append, Remove & Modify</h2>
+
+  <button onclick="addItem()">Add Item</button>
+  <button onclick="removeItem()">Remove Last Item</button>
+  <button onclick="modifyItem()">Modify First Item</button>
+
+  <ul id="list">
+    <li>Item 1</li>
+    <li>Item 2</li>
+  </ul>
+
+  <script>
+    let list = document.getElementById("list");
+    let count = 3;
+    
+    function addItem() {
+      let li = document.createElement("li");
+      li.innerHTML = "Item " + count;
+      list.appendChild(li);
+      count++;
+    }
+    function removeItem() {
+      if (list.lastElementChild) {
+        list.removeChild(list.lastElementChild);
+      }
+    } 
+    function modifyItem() {
+      if (list.firstElementChild) {
+        list.firstElementChild.innerHTML = "Modified Item";
+        list.firstElementChild.classList.toggle("highlight");
+      }
+    }
+  </script>
+
+</body>
+</html>

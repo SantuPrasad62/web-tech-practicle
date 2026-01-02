@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Conditionals and Loops</title>
+</head>
+<body>
+
+<h2>JavaScript Conditionals and Loops Demo</h2>
+<button onclick="runDemo()">Run Demo</button>
+<p id="output"></p>
+<script>
+function runDemo() {
+    let result = "";
+    let num = 10;
+    if (num > 0) {
+        result += "Number is positive<br>";
+    } else if (num < 0) {
+        result += "Number is negative<br>";
+    } else {
+        result += "Number is zero<br>";
+    }
+    result += "<br>For Loop (1 to 5):<br>";
+    for (let i = 1; i <= 5; i++) {
+        result += i + " ";
+    }
+    result += "<br><br>While Loop (1 to 5):<br>";
+    let j = 1;
+    while (j <= 5) {
+        result += j + " ";
+        j++;
+    }
+    result += "<br><br>Do...While Loop (1 to 5):<br>";
+    let k = 1;
+    do {
+        result += k + " ";
+        k++;
+    } while (k <= 5);
+    document.getElementById("output").innerHTML = result;
+}
+</script>
+
+</body>
+</html>
